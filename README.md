@@ -1,4 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+![](honeypot.png)
+
 mhn is an R package to interface with the MHN API and (eventually) provide tools to analyze and visualize MHN data.
 
 The API wrapper functions in this package all rely on a MHN server API key residing in the environment variable `MHN_API_KEI` or being passed in as a parameter. The former is useful in simple deplpoyments where there is only one MHN server. In such cases, the easiest way to accomplish this is to set it in the `.Renviron` file in your home directory.
@@ -47,7 +49,7 @@ library(mhn)
 library(testthat)
 
 date()
-#> [1] "Sat Aug 22 09:27:50 2015"
+#> [1] "Sat Aug 22 09:47:06 2015"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================
