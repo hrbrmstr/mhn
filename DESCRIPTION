@@ -1,8 +1,10 @@
 Package: mhn
-Title: What the Package Does (one line, title case)
+Title: Analyze and Visualize Data from Modern Honey Network Servers
 Version: 0.0.0.9000
 Authors@R: c(person("Bob", "Rudis", email = "bob@rudis.net", role = c("aut", "cre")))
-Description: What the package does (one paragraph).
+Description: Analyze and Visualize Data from Modern Honey Network Servers.
 Depends: R (>= 3.2.2)
 License: MIT + file LICENSE
 LazyData: true
+Suggests: testthat
+Imports: httr, jsonlite
