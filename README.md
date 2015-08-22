@@ -18,19 +18,21 @@ This package pairs nicely with:
 
 The following functions are implemented:
 
+-   `all_metadata`: Get all collected metadata
 -   `attacker_stats`: Get attacker (IP) statistics
 -   `feed_info`: Get data for a specific hpfeed
 -   `hp_feeds`: Getthe raw hpfeeds data collected over a specific channel.
 -   `intel_feed`: Get intel feed
 -   `ip_metadata`: Get IP metadata (mainly from 'p0f' honeypot data)
+-   `metadata_for`: Get metadata for a specific id
 -   `mhn_api_key`: Get or set `MHN_API_KEY` value
+-   `mhn_dork`: MHN dork *(I have no idea what this is tho)*
+-   `mhn_file`: MHN file *(I have no idea what this is tho)*
+-   `mhn_url`: MHN url *(I have no idea what this is tho)*
 -   `sensors`: Get sensors.
 -   `sessions`: Get normalized sessions/connection data
 -   `session_info`: Get data for a specific attack session
 -   `top_attackers`: Get top attackers
--   `mhn_dork`: MHN dork *(I have no idea what this is tho)*
--   `mhn_file`: MHN file *(I have no idea what this is tho)*
--   `mhn_url`: MHN url *(I have no idea what this is tho)*
 
 ### News
 
@@ -98,7 +100,7 @@ library(mhn)
 library(testthat)
 
 date()
-#> [1] "Sat Aug 22 12:13:33 2015"
+#> [1] "Sat Aug 22 12:30:25 2015"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================
