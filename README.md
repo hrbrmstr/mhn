@@ -3,7 +3,7 @@
 
 mhn is an R package to interface with the MHN API and (eventually) provide tools to analyze and visualize MHN data.
 
-The API wrapper functions in this package all rely on a MHN server API key residing in the environment variable `MHN_API_KEI` or being passed in as a parameter. The former is useful in simple deplpoyments where there is only one MHN server. In such cases, the easiest way to accomplish this is to set it in the `.Renviron` file in your home directory.
+The API wrapper functions in this package all rely on a MHN server API key residing in the environment variable `MHN_API_KEY` or being passed in as a parameter. The former is useful in simple deplpoyments where there is only one MHN server. In such cases, the easiest way to accomplish this is to set it in the `.Renviron` file in your home directory.
 
 This package pairs nicely with: - [iptools](https://github.com/hrbrmstr/iptools) - [urltools](https://github.com/Ironholds/urltools) - [cymruservices](https://github.com/hrbrmstr/cymruservices) - [shodan](https://github.com/hrbrmstr/shodan) - [rgeolocate](https://github.com/Ironholds/rgeolocate) - [whoisxmlapi](https://github.com/hrbrmstr/whoisxmlapi) - [domaintools](https://github.com/hrbrmstr/domaintools) - [whoapi](https://github.com/Ironholds/whoapi)
 
@@ -49,7 +49,7 @@ library(mhn)
 library(testthat)
 
 date()
-#> [1] "Sat Aug 22 09:47:06 2015"
+#> [1] "Sat Aug 22 09:49:36 2015"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================
