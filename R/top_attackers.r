@@ -7,13 +7,14 @@
 #' @return \code{list} with attacker data and query result metadata
 #' @export
 top_attackers <- function(hours_ago=NULL, limit=NULL,
-                          api_key=mhn_api_key()) {
+                          api_key=mhn_api_key(),
+                          api_url=mhn_base_url()) {
 
   params <- list(api_key=api_key)
   if (!is.null(hours_ago)) params$hours_ago <- hours_ago
   if (!is.null(limit)) params$limit <- limit
 
-  req <- GET(mhn_base_url, path="api/top_attackers/", query=params)
+  req <- GET(api_url, path="api/top_attackers/", query=params)
 
   stop_for_status(req)
 

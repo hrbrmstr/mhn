@@ -17,7 +17,7 @@ mhn_api_key <- function(force = FALSE) {
 
   if (!interactive()) {
     stop("Please set env var MHN_API_KEY to your MHN server API key",
-      call. = FALSE)
+         call. = FALSE)
   }
 
   message("Couldn't find env var MHN_API_KEY See ?mhn_api_key for more details.")

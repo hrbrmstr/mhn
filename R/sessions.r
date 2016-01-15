@@ -10,14 +10,15 @@
 #' @note The query API key is stripped from the query result metadata (if present)
 #' @export
 sessions <- function(honeypot=NULL, hours_ago=NULL, limit=NULL,
-                          api_key=mhn_api_key()) {
+                     api_key=mhn_api_key(),
+                     api_url=mhn_base_url()) {
 
   params <- list(api_key=api_key)
   if (!is.null(honeypot)) params$honeypot <- honeypot
   if (!is.null(hours_ago)) params$hours_ago <- hours_ago
   if (!is.null(limit)) params$limit <- limit
 
-  req <- GET(mhn_base_url, path="api/session/", query=params)
+  req <- GET(api_url, path="api/session/", query=params)
 
   stop_for_status(req)
 
@@ -37,12 +38,14 @@ sessions <- function(honeypot=NULL, hours_ago=NULL, limit=NULL,
 #' @return \code{list} with session data and query result metadata
 #' @note The query API key is stripped from the query result metadata (if present)
 #' @export
-session_info <- function(session_id=NULL, api_key=mhn_api_key()) {
+session_info <- function(session_id=NULL, api_key=mhn_api_key(),
+                         api_url=mhn_base_url()) {
+
 
   params <- list(api_key=api_key)
   if (is.null(session_id)) stop("'session_id' is required", call.=FALSE)
 
-  req <- GET(mhn_base_url, path=sprintf("api/session/%s/", session_id), query=params)
+  req <- GET(api_url, path=sprintf("api/session/%s/", session_id), query=params)
 
   stop_for_status(req)
 

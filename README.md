@@ -36,7 +36,8 @@ The following functions are implemented:
 
 ### News
 
--   Version 0.0.0.9000 released
+-   Version 0.0.1.9000 : paarmeterized the MHN URL 
+-   Version 0.0.0.9000 : initial release
 
 ### Installation
 
@@ -51,21 +52,11 @@ library(mhn)
 
 # current verison
 packageVersion("mhn")
-#> [1] '0.0.0.9000'
+#> [1] '0.0.1.9000'
 
 library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> 
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> 
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
+library(ggplo2)
 library(ggthemes)
-#> Loading required package: ggplot2
 library(scales)
 
 ssns <- sessions(hours_ago=24)$data

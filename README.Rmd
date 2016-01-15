@@ -57,7 +57,8 @@ The following functions are implemented:
 
 ### News
 
-- Version 0.0.0.9000 released
+- Version 0.0.1.9000 : paarmeterized the MHN URL 
+- Version 0.0.0.9000 : initial release
 
 ### Installation
 
@@ -78,6 +79,7 @@ library(mhn)
 packageVersion("mhn")
 
 library(dplyr)
+library(ggplo2)
 library(ggthemes)
 library(scales)
 
